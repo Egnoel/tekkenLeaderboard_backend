@@ -118,7 +118,9 @@ const characters = [
 
 async function addCharacters() {
   try {
-    await mongoose.connect('mongodb://localhost:27017/tekken');
+    await mongoose.connect(
+      'mongodb+srv://blue:bluestorm1845@mern.jhpko.mongodb.net/tekken'
+    );
 
     // Insere vários personagens de uma vez
     await Character.insertMany(characters);
